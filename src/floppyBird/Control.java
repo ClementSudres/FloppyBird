@@ -10,6 +10,19 @@ import java.awt.event.*;
  */
 public class Control implements MouseListener {
 
+	private Etat etat;
+	private Affichage affichage;
+
+	/**
+	 * Constructeur
+	 * @param etat
+	 * @param affichage
+	 */
+	public Control(Etat etat, Affichage affichage) {
+		this.etat = etat;
+		this.affichage = affichage;
+	}
+
 	/* Lors d'un click de la souris, Etat.jump est executé */
 	@Override
 	public void mouseClicked(MouseEvent e) 

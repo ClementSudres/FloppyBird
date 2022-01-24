@@ -10,16 +10,24 @@ public class Etat {
         this.affichage = a;
     }
 
-    public void Parcours()
+    public Etat(Parcours parcours)
     {
-
+        this.hauteur = Affichage.Y;
+        this.parcours = parcours;
     }
 
     /* Affiche la hauteur du oval dans le terminal*/
-    public static void getHauteur()
+    public int getHauteur()
     {
-    	 System.out.print(hauteur);
+    	 return this.hauteur;
     }
+    /*
+    public Parcours getParcours()
+    {
+        return this.parcours;
+    }
+     */
+
     /*Change la hauteur du ovale*/
     public static void jump() 
     {
@@ -32,6 +40,5 @@ public class Etat {
         {
             hauteur += 10;
         }
-        affichage.updateOval();
     }
 }
